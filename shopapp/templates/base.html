@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title>Easyshop - {{title}}</title>
+    {% else %}
+      <title> Easyshop </title>
+     {% endif %} 
+</head>
+<body>
+    {% block content %}<h1></h1> {%endblock%}
+
+</body>   
+</html>
