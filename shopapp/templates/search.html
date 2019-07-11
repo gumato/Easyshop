@@ -7,7 +7,7 @@
         {%for prod in products%}
         <div class="col-md-4">
         <div class="card">
-            <div class="card-header"> {{prod.name}}</div>
+            <div class="card-header"> {{prod.name}} {{prod.category}}</div>
             <div class="card-body">
                 {%if prod.image%}
                <a href="{{prod.link}}"> <img height="300" width="300" class="" src="{{prod.image.url}}" alt=""></a>

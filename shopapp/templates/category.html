@@ -9,12 +9,10 @@
         <div class="card">
             <div class="card-header"> {{prod.name}}</div>
             <div class="card-body">
-                {%if prod.image%}
-               <a href="{{prod.link}}"> <img height="300" width="300" class="" src="{{prod.image.url}}" alt=""></a>
-                {%else%}
-                <img height="300" width="300" class="" src="/static/img/default.jpg" alt="">
-                {%endif%}
+                <img height="300" width="300" class="" src="{{prod.image.url}}" alt="">
+                <p>{{prod.price}}</p>
             </div>
+
         </div>
         </div>
         {%endfor%}
