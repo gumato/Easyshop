@@ -1,6 +1,6 @@
 <!--Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top navbar-light " style="background-color:coral;">
-  <a class="navbar-brand" href="#">Home</a>
+  <a class="navbar-brand" href="{%url 'index'%}">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
     aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,6 +10,8 @@
       <input type="text" name="name" placeholder="Search by name">
     </form>
   </div>
+
+  <a class="nav-item" href="{%url 'fashion'%}">Fashion</a>
 <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
   <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">

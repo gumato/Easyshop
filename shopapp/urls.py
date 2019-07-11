@@ -6,7 +6,8 @@ from django.conf.urls.static import static
 urlpatterns=[
     url('^$',views.index,name = 'index'),
     url(r'^search/', views.search, name='search_category'),
-    url(r'signup/', views.Signup, name="signup"),
+    url(r'^signup/', views.Signup, name="signup"),
+    url(r'^fashion/',views.fashion, name='fashion'),
     url(r'^categories/(\d+)/$',views.categories,name='categories'),
 
 ]
