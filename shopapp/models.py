@@ -7,6 +7,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 class Product(models.Model):
     category = models.ForeignKey(Category,related_name='products')
     name = models.CharField(max_length=200)
@@ -16,3 +17,13 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     link = models.URLField(blank=True)
+
+    class Meta:
+        ordering = ('-created',)
+    def __str__(self):
+        return self.name
+
+    @classmethod
+    def search_by_name(cls,name):
+        result=cls.objects.filter(name__icontains=name)
+        return result
