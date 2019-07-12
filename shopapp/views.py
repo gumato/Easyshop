@@ -6,15 +6,11 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    
-    return render(request,'index.html')
-
-def fashion(request):
     date = dt.date.today()
     products = Product.objects.all()
     cat=Category.objects.all()
-    return render(request,'fashion.html',locals())
-
+    
+    return render(request,'index.html',{'cat':cat,'products':products})
 
 def Signup(request):
     if request.method == 'POST':
